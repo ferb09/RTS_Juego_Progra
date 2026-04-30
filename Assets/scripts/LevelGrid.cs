@@ -43,14 +43,14 @@ public class LevelGrid : MonoBehaviour
         //Pathfinding.Instance.Setup(ancho, largo, cellSize);
     }
 
-    /*
+    
     public void AddUnitAtGridPosition(GridPosition pos, Unit unidad)
     {
         // Obtengo el cuadrito que está en la posición
         GridObject casilla = gridSystem.GetGridObject(pos);
         // En esa casilla agrego a la unidad
         casilla.AddUnit(unidad);
-    }*/
+    }
 
     /*
     public void RemoveUnitAtGridPosition(GridPosition pos, Unit unidad)
@@ -76,9 +76,10 @@ public class LevelGrid : MonoBehaviour
         OnAnyUnitMovedGridPosition?.Invoke(this, EventArgs.Empty);
     }*/
 
-    /*public GridPosition ...*/
+    public GridPosition GetGridPosition(Vector3 worldPosition) => 
+        gridSystem.GetGridPosition(worldPosition);
     
-    /*public Vector3 GetWorldPosition(GridPosition posGrid) =>
+    public Vector3 GetWorldPosition(GridPosition posGrid) =>
         gridSystem.GetWorldPosition(posGrid);
 
     public bool IsValidGridPosition(GridPosition pos) =>
@@ -87,7 +88,7 @@ public class LevelGrid : MonoBehaviour
     public int GetWidth() => gridSystem.GetWidth();
 
     public int GetHeight() => gridSystem.GetHeight();
-    */
+    
 	
 	/*public bool HasAnyUnitOnGridPosition(GridPosition posicion)
 	{
